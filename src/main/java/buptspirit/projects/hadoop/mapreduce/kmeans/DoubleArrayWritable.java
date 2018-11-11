@@ -2,9 +2,6 @@ package buptspirit.projects.hadoop.mapreduce.kmeans;
 
 import org.apache.hadoop.io.ArrayWritable;
 import org.apache.hadoop.io.DoubleWritable;
-import org.apache.hadoop.io.Writable;
-
-import java.util.Arrays;
 
 public class DoubleArrayWritable extends ArrayWritable {
 
