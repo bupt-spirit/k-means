@@ -7,11 +7,6 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 import java.util.Arrays;
 
-/**
- * K-Means Reducer
- * Input:  key is the index of the cluster, value is the partial results
- * Output: key is the index of the cluster, value is the new center (the mean of all partial result)
- */
 public class KMeansReducer extends Reducer<LongWritable, MeanResult, LongWritable, MeanResult> {
 
     @Override

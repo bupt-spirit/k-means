@@ -11,11 +11,6 @@ import java.io.IOException;
 import java.net.URI;
 import java.util.Map;
 
-/**
- * K-Means Mapper
- * Input:  key is offset of the sample in file, value is the sample text
- * Output: key is the index of the cluster, value is a the sample in DoubleArrayWritable
- */
 public class KMeansMapper extends Mapper<LongWritable, Text, LongWritable, MeanResult> {
 
     private Map<Long, double[]> centers;
