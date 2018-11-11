@@ -31,7 +31,8 @@ public class KMeansCombiner extends Reducer<LongWritable, DoubleArrayWritable, L
 
         DoubleArrayWritable result = new DoubleArrayWritable();
         result.set(sum);
-
-        PartialResult partialResult = new PartialResult(key, result);
+        LongWritable count_writable = new LongWritable(count);
+        PartialResult partialResult = new PartialResult(count_writable, result);
+        context.write(key, partialResult);
     }
 }
