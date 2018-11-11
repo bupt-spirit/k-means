@@ -43,7 +43,7 @@ public class KMeans {
         String[] remainingArgs = optionParser.getRemainingArgs();
 
         Options options = options();
-        CommandLineParser parser = new DefaultParser();
+        CommandLineParser parser = new PosixParser();
         HelpFormatter helpFormatter = new HelpFormatter();
         CommandLine commandLine = null;
         try {
