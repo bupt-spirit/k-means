@@ -6,7 +6,7 @@ import org.apache.hadoop.io.Writable;
 
 import java.util.Arrays;
 
-class DoubleArrayWritable extends ArrayWritable {
+public class DoubleArrayWritable extends ArrayWritable {
 
     public DoubleArrayWritable() {
         super(DoubleWritable.class);

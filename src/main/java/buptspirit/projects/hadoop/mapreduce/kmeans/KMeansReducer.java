@@ -1,5 +1,6 @@
 package buptspirit.projects.hadoop.mapreduce.kmeans;
 
+import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.mapreduce.Reducer;
 
@@ -14,6 +15,24 @@ public class KMeansReducer extends Reducer<LongWritable, PartialResult, LongWrit
 
     @Override
     protected void reduce(LongWritable key, Iterable<PartialResult> values, Context context) throws IOException, InterruptedException {
-        super.reduce(key, values, context);
+    	
+    	
+
+    	int dimention = -1;
+    	int count = 0;
+    	double [] sum = null;
+    	for (PartialResult result : values)
+    	{
+    		if (dimention == -1) {
+    			dimention = result.getResult().toStrings().length;
+    			sum = new double[dimention];
+    			//FIX LATER
+    		}
+    		
+    		count += result.getCount().get();
+    		DoubleArrayWritable partial = result.getResult();
+    		
+    		
+    	}
     }
 }
