@@ -1,7 +1,5 @@
 package buptspirit.projects.hadoop.mapreduce.kmeans;
 
-import org.apache.hadoop.io.DoubleWritable;
-import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Writable;
 
 import java.io.DataInput;

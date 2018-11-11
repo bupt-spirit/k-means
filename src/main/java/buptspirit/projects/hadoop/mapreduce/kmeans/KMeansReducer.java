@@ -1,11 +1,9 @@
 package buptspirit.projects.hadoop.mapreduce.kmeans;
 
-import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 public class KMeansReducer extends Reducer<LongWritable, MeanResult, LongWritable, MeanResult> {
 
