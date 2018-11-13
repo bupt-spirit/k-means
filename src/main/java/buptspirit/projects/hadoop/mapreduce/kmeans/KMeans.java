@@ -68,7 +68,7 @@ public class KMeans {
             maxIterations = Long.parseUnsignedLong(maxIterationsString);
         }
         String thresholdString = commandLine.getOptionValue("threshold");
-        if (maxIterationsString != null) {
+        if (thresholdString != null) {
             threshold = Double.parseDouble(thresholdString);
         }
         if (start == 0) {
